@@ -1,5 +1,4 @@
 # Import the random module to allow the computer to make a random choice
-
 import random
 
 
