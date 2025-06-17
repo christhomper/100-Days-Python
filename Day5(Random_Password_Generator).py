@@ -4,13 +4,13 @@ import random
 import pyperclip
 import platform
 
-# --- Character pools ---
+# Character pools
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
-# --- OS-aware clipboard instructions ---
+# OS-aware clipboard instructions
 def get_clipboard_instruction():
     os_name = platform.system()
     if os_name == "Darwin":
@@ -22,7 +22,7 @@ def get_clipboard_instruction():
     else:
         return "Paste it from your clipboard"
 
-# --- Password Strength Rating ---
+# Password Strength Rating
 def get_password_strength(num_letters, num_symbols, num_numbers):
     total = num_letters + num_symbols + num_numbers
     if total >= 18 and num_letters >= 6 and num_symbols >= 6 and num_numbers >= 6:
@@ -36,7 +36,7 @@ def get_password_strength(num_letters, num_symbols, num_numbers):
     else:
         return "⚠️ Weak"
 
-# --- Main Password Generator Function ---
+# Main Password Generator Function
 def generate_password():
     try:
         num_letters = int(letter_entry.get())
@@ -68,7 +68,7 @@ def generate_password():
     instruction_var.set(get_clipboard_instruction())
     pyperclip.copy(password)
 
-# --- UI Setup ---
+# UI Setup
 root = tk.Tk()
 root.title("🔐 PyPassword Generator")
 root.geometry("400x350")
