@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="5ee70a7b-35d5-4ba5-8251-20b1fe873b91" name="Changes" comment="&quot;Added Rock_Paper_Scissors&quot;">
+      <change afterPath="$PROJECT_DIR$/.idea/100_Days_Python.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Day5(Random_Password_Generator).py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;christhomper&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/christhomper/100_Days_Python.git&quot;,
+    &quot;accountId&quot;: &quot;68920e5d-f850-44da-bbfb-b0d42d2909fe&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2yWXMyisNuWv9KHI8yJqviwNtL7" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.Day3().executor": "Run",
+    "Python.Day4(Rock_Paper_Scissors).executor": "Run",
+    "Python.Day5(Random_Password_Generator).executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/christhompson/PycharmProjects/100_Days_Python"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-53e2683a6804-9cdd278e9d02-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-251.26094.141" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="5ee70a7b-35d5-4ba5-8251-20b1fe873b91" name="Changes" comment="" />
+      <created>1749951258702</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1749951258702</updated>
+    </task>
+    <task id="LOCAL-00001" summary="&quot;Added Band_Name_Generator&quot;">
+      <option name="closed" value="true" />
+      <created>1749951441245</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749951441245</updated>
+    </task>
+    <task id="LOCAL-00002" summary="&quot;Added Tip_Calculator&quot;">
+      <option name="closed" value="true" />
+      <created>1749951759496</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749951759496</updated>
+    </task>
+    <task id="LOCAL-00003" summary="&quot;Added Treasure_Island_Game&quot;">
+      <option name="closed" value="true" />
+      <created>1750011383070</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1750011383070</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;Added Rock_Paper_Scissors&quot;">
+      <option name="closed" value="true" />
+      <created>1750104744139</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1750104744139</updated>
+    </task>
+    <task id="LOCAL-00005" summary="&quot;Added Rock_Paper_Scissors&quot;">
+      <option name="closed" value="true" />
+      <created>1750104827254</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1750104827254</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;Added Band_Name_Generator&quot;" />
+    <MESSAGE value="&quot;Added Tip_Calculator&quot;" />
+    <MESSAGE value="&quot;Added Treasure_Island_Game&quot;" />
+    <MESSAGE value="&quot;Added Rock_Paper_Scissors&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;Added Rock_Paper_Scissors&quot;" />
+  </component>
+</project>
