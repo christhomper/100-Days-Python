@@ -35,6 +35,7 @@ def set_difficulty():
         return SUDDEN_DEATH_LEVEL_TURNS
 
 def game():
+    print("\n" * 100)
     print(logo)
     print("Welcome to the Number Guessing Game!")
     print("I'm thinking of a number between 1 and 100.")
@@ -55,8 +56,6 @@ def game():
             return
         elif guess != answer:
             print("Guess again.")
-
-game ()
 
 while True:
     game()
