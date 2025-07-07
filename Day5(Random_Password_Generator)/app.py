@@ -1,16 +1,17 @@
+# Import necessary modules
 import tkinter as tk
 from tkinter import messagebox
 import random
 import pyperclip
 import platform
 
-# Character pools
+# Character pools for generating password
 letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
 numbers = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9']
 symbols = ['!', '#', '$', '%', '&', '(', ')', '*', '+']
 
-# OS-aware clipboard instructions
+# Detect the operating system to give correct clipboard paste instructions
 def get_clipboard_instruction():
     os_name = platform.system()
     if os_name == "Darwin":
@@ -22,7 +23,7 @@ def get_clipboard_instruction():
     else:
         return "Paste it from your clipboard"
 
-# Password Strength Rating
+# Determine strength of generated password based on length and variety
 def get_password_strength(num_letters, num_symbols, num_numbers):
     total = num_letters + num_symbols + num_numbers
     if total >= 18 and num_letters >= 6 and num_symbols >= 6 and num_numbers >= 6:
@@ -36,9 +37,10 @@ def get_password_strength(num_letters, num_symbols, num_numbers):
     else:
         return "⚠️ Weak"
 
-# Main Password Generator Function
+# Core password generation logic
 def generate_password():
     try:
+        # Get values from user input fields
         num_letters = int(letter_entry.get())
         num_symbols = int(symbol_entry.get())
         num_numbers = int(number_entry.get())
@@ -47,6 +49,7 @@ def generate_password():
         return
 
     total = num_letters + num_symbols + num_numbers
+    # Validate minimum length and reasonable input sizes
     if total < 12:
         messagebox.showwarning("⚠️ Too Short", "Password must be at least 12 characters.")
         return
@@ -54,21 +57,26 @@ def generate_password():
         messagebox.showerror("❌ Limit Exceeded", "Too many characters requested.")
         return
 
+    # Randomly choose characters
     password_letters = random.sample(letters, k=num_letters)
     password_symbols = random.sample(symbols, k=num_symbols)
     password_numbers = random.sample(numbers, k=num_numbers)
 
+    # Combine, shuffle, and generate password string
     password_list = password_letters + password_symbols + password_numbers
     random.shuffle(password_list)
     password = "".join(password_list)
 
+    # Display password and copy to clipboard
     result_var.set(f"\n✅ {password}\n")
     strength_text = get_password_strength(num_letters, num_symbols, num_numbers)
     strength_var.set(strength_text)
     instruction_var.set(get_clipboard_instruction())
     pyperclip.copy(password)
 
-# UI Setup
+# -------------------- UI SETUP -------------------- #
+
+# Create main window
 root = tk.Tk()
 root.title("🔐 PyPassword Generator")
 root.geometry("400x350")
@@ -77,7 +85,7 @@ root.resizable(False, False)
 frame = tk.Frame(root, padx=20, pady=20)
 frame.pack()
 
-# Instructions
+# Labels and entry fields for character counts
 tk.Label(frame, text="How many letters would you like in your password?").grid(row=0, column=0, columnspan=2, sticky="w")
 tk.Label(frame, text="🔤 Letters:").grid(row=1, column=0, sticky="w")
 letter_entry = tk.Entry(frame, width=5)
@@ -93,10 +101,10 @@ tk.Label(frame, text="🔢 Numbers:").grid(row=5, column=0, sticky="w")
 number_entry = tk.Entry(frame, width=5)
 number_entry.grid(row=5, column=1)
 
-# Button
+# Generate button
 tk.Button(frame, text="✨ Generate Password", command=generate_password).grid(row=6, columnspan=2, pady=10)
 
-# Output
+# Display fields for output, strength, and clipboard instructions
 result_var = tk.StringVar()
 tk.Label(frame, textvariable=result_var, font=("Courier", 12), wraplength=300).grid(row=7, columnspan=2, pady=5)
 
@@ -106,5 +114,5 @@ tk.Label(frame, textvariable=strength_var, font=("Arial", 10, "bold"), fg="green
 instruction_var = tk.StringVar()
 tk.Label(frame, textvariable=instruction_var, font=("Arial", 9, "italic"), fg="gray").grid(row=9, columnspan=2, pady=5)
 
-# Run the app
+# Start the app
 root.mainloop()

@@ -1,8 +1,10 @@
 from art import logo
-print(logo)
 
+# Display ASCII logo and welcome message
+print(logo)
 print("Welcome to the silent auction program\n")
 
+# Function to determine the highest bidder
 def find_highest_bidder(bidding_dictionary):
     winner = ""
     highest_bid = 0
@@ -14,7 +16,7 @@ def find_highest_bidder(bidding_dictionary):
 
     print(f"\nThe winner is {winner} with a bid of ${highest_bid}.")
 
-
+# Main bidding loop
 bids = {}
 continue_bidding = True
 while continue_bidding:
@@ -26,6 +28,7 @@ while continue_bidding:
         continue_bidding = False
         find_highest_bidder(bids)
     elif should_continue == "yes":
+        # Clear screen between bidders (simulate privacy)
         print("\n" * 100)
 
 

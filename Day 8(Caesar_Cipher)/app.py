@@ -1,9 +1,12 @@
 from art import logo
+
+# Display ASCII logo
 print(logo)
 
-
+# Define the alphabet
 alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
+# Caesar cipher function to handle both encoding and decoding
 def caesar(original_text, shift_amount, encode_or_decode):
     output_text = ""
 
@@ -21,6 +24,7 @@ def caesar(original_text, shift_amount, encode_or_decode):
             output_text += alphabet[shifted_position]
     print(f"Here is the {encode_or_decode}d result: {output_text}")
 
+# Main loop to keep the program running until the user quits
 should_continue = True
 
 while should_continue:

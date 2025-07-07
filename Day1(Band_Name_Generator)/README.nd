@@ -8,8 +8,6 @@ A fun and simple Python project that generates a band name based on user input. 
 2. Prompts the user to enter the name of a pet.
 3. Combines the two inputs to generate a potential band name.
 
-## 💻 Sample Output
-
 ## 🧠 Concepts Practiced
 
 - Using `input()` to gather user data
