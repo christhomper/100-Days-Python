@@ -1,4 +1,4 @@
-# 🏓 Pong – A Classic Remake in Python
+# 🏓 Pong 
 
 A simple two-player Pong game built with Python's `turtle` module. Inspired by the original arcade classic.
 
