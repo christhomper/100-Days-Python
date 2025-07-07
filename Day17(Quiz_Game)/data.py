@@ -1,3 +1,4 @@
+# Question data structured as a list of dictionaries
 question_data = [
     {"type": "boolean", "difficulty": "easy", "category": "Science: Computers",
      "question": "Linux was first created as an alternative to Windows XP.", "correct_answer": "False",

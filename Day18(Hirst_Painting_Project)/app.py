@@ -1,3 +1,4 @@
+# Uncomment this section to extract colors from an image using colorgram
 # import colorgram
 #
 # rgb_colors = []

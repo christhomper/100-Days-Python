@@ -35,6 +35,7 @@ def compare(u_score, c_score):
     else:
         return "You lose 😤"
 
+# Main game logic for a round of blackjack
 def play_game():
     print(logo)
     user_cards = []
@@ -43,10 +44,12 @@ def play_game():
     computer_score = -1
     is_game_over = False
 
+    # Initial dealing of two cards to both players
     for _  in range(2):
         user_cards.append(deal_card())
         computer_cards.append(deal_card())
 
+    # User's turn
     while not is_game_over:
         user_score = calculate_score(user_cards)
         computer_score = calculate_score(computer_cards)
@@ -64,14 +67,17 @@ def play_game():
             else:
                 is_game_over = True
 
+    # Computer's turn (hits until score >= 17)
     while computer_score != 0 and computer_score < 17:
         computer_cards.append(deal_card())
         computer_score = calculate_score(computer_cards)
 
+    # Final results
     print(f"Your final hand: {user_cards}, final score: {user_score}")
     print(f"Opponent's final hand: {computer_cards}, final score: {computer_score}")
     print(compare(user_score, computer_score))
 
+# Game loop to allow replaying
 while input("Do you want to play a game of Blackjack? Type 'y' or 'n': ") == "y":
     print("\n" * 100)
     play_game()

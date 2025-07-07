@@ -1,13 +1,14 @@
 from random import randint
 from art import logo
 
+# Difficulty level constants
 EASY_LEVEL_TURNS = 10
 NORMAL_LEVEL_TURNS = 7
 HARD_LEVEL_TURNS = 5
 EXTREME_LEVEL_TURNS = 3
 SUDDEN_DEATH_LEVEL_TURNS = 1
 
-# Function to check users' guess against actual answer
+# Compare user's guess with the actual number
 def check_answer(user_guess, actual_answer, turns):
     """Checks answer against guess, returns the number of turns remaining."""
     if user_guess > actual_answer:
@@ -19,7 +20,7 @@ def check_answer(user_guess, actual_answer, turns):
     else:
         print(f"You win 😃! The answer is {actual_answer}")
 
-# Function to set difficulty
+# Ask the user to select a difficulty level
 def set_difficulty():
     """Sets difficulty for number guessing game."""
     level = input("Choose a difficulty. Type 'easy' , 'normal' , 'hard' , 'extreme' or 'sudden death': ")
@@ -34,6 +35,7 @@ def set_difficulty():
     else:
         return SUDDEN_DEATH_LEVEL_TURNS
 
+# Main game logic
 def game():
     print("\n" * 100)
     print(logo)
@@ -42,14 +44,12 @@ def game():
     answer = randint(1, 100)
 
     turns = set_difficulty()
-
-    # Repeat the guessing functionality if player gets it wrong.
     guess = 0
+
+    # Loop until the user guesses correctly or runs out of turns
     while guess != answer:
         print(f"You have {turns} attempts left to guess the number.")
-        # Let the player guess a number
         guess = int(input("Make a guess: "))
-        # Track the number of turns and reduce by 1 if player gets it wrong
         turns = check_answer(guess, answer, turns)
         if turns == 0:
             print("You've run out of guesses, you lose 😭.")
@@ -57,6 +57,7 @@ def game():
         elif guess != answer:
             print("Guess again.")
 
+# Game loop for replay
 while True:
     game()
     play_again = input("Do you want to play again? Type 'y' for yes or 'n' to quit: ")
